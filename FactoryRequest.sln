@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryRequest", "FactoryRequest\FactoryRequest.csproj", "{152287EA-F5C5-4F1F-B1CA-9C67C119E10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryRequest.Test", "FactoryRequest.Test\FactoryRequest.Test.csproj", "{74459646-003C-4ECB-8C71-4DB5F4B9B8FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{152287EA-F5C5-4F1F-B1CA-9C67C119E10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152287EA-F5C5-4F1F-B1CA-9C67C119E10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152287EA-F5C5-4F1F-B1CA-9C67C119E10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152287EA-F5C5-4F1F-B1CA-9C67C119E10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74459646-003C-4ECB-8C71-4DB5F4B9B8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74459646-003C-4ECB-8C71-4DB5F4B9B8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74459646-003C-4ECB-8C71-4DB5F4B9B8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74459646-003C-4ECB-8C71-4DB5F4B9B8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = FactoryRequest\FactoryRequest.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 120
+		$1.RemoveTrailingWhitespace = True
+		$1.EolMarker = Unix
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.IndentSwitchBody = True
+		$2.NamespaceBraceStyle = EndOfLine
+		$2.ClassBraceStyle = EndOfLine
+		$2.InterfaceBraceStyle = EndOfLine
+		$2.StructBraceStyle = EndOfLine
+		$2.EnumBraceStyle = EndOfLine
+		$2.MethodBraceStyle = EndOfLine
+		$2.ConstructorBraceStyle = EndOfLine
+		$2.DestructorBraceStyle = EndOfLine
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.IfParentheses = False
+		$2.WhileParentheses = False
+		$2.ForParentheses = False
+		$2.ForeachParentheses = False
+		$2.CatchParentheses = False
+		$2.SwitchParentheses = False
+		$2.LockParentheses = False
+		$2.UsingParentheses = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+		$0.StandardHeader = $4
+		$4.Text = 
+		$4.inheritsSet = Apache2License
+	EndGlobalSection
+EndGlobal
