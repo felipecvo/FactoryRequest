@@ -17,7 +17,7 @@ namespace FactoryRequest.Test {
             var response = request.GetResponse();
             
             Assert.IsNotNull(response);
-            Assert.IsInstanceOfType(typeof(FakeResponse), response);
+            Assert.IsInstanceOf<FakeResponse>(response);
         }
 
         [Test()]
@@ -33,17 +33,17 @@ namespace FactoryRequest.Test {
             }
 
             Assert.IsNotNull(response);
-            Assert.IsInstanceOfType(typeof(FakeResponse), response);
+            Assert.IsInstanceOf<FakeResponse>(response);
             Assert.AreEqual("oi", responseText);
         }
 
         [Test()]
-        public void TestCase3() {
+        public void ShouldBeAbleToDoRealRequests() {
             var request = WebRequest.Create("http://www.google.com");
-            Assert.IsInstanceOfType(typeof(HttpWebRequest), request);
+            Assert.IsInstanceOf<HttpWebRequest>(request);
             var response = request.GetResponse();
             Assert.IsNotNull(response);
-            Assert.IsInstanceOfType(typeof(HttpWebResponse), response);
+            Assert.IsInstanceOf<HttpWebResponse>(response);
         }
     }
 }
