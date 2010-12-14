@@ -12,8 +12,8 @@ namespace FactoryRequest.Test {
             var http = creator.Create(new Uri("http://localhost/"));
 
             Assert.IsNotNull(http);
-            Assert.IsInstanceOfType(typeof(HttpWebRequest), http);
-            Assert.IsNotInstanceOfType(typeof(FakeRequest), http);
+            Assert.IsInstanceOf<HttpWebRequest>(http);
+            Assert.IsNotInstanceOf<FakeRequest>(http);
             TestHelper.IsValidRequestObject(http as HttpWebRequest);
         }
 
@@ -25,7 +25,7 @@ namespace FactoryRequest.Test {
             var http = creator.Create(new Uri(url));
 
             Assert.IsNotNull(http);
-            Assert.IsInstanceOfType(typeof(FakeRequest), http);
+            Assert.IsInstanceOf<FakeRequest>(http);
             TestHelper.IsValidRequestObject(http as FakeRequest);
         }
     }
