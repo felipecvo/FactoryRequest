@@ -9,12 +9,11 @@ namespace FactoryRequest {
         private Uri requestUri;
         private long contentLength;
 
-        public FakeRequest(SerializationInfo info, StreamingContext ctx) : base(info, ctx) { }
+        public FakeRequest(SerializationInfo info, StreamingContext ctx) : base(info, ctx) {
+        }
 
         public override Uri RequestUri {
-            get {
-                return requestUri;
-            }
+            get { return requestUri; }
         }
 
         public static FakeRequest New(Uri uri) {
@@ -43,20 +42,25 @@ namespace FactoryRequest {
             lockerField.SetValue(this, new object());
         }
 
+        public override Stream GetRequestStream() {
+            if(Method.ToUpper() != "POST")
+                throw new ProtocolViolationException("Cannot send data when method is: " + Method);
+
+            return new MemoryStream();
+        }
+
         public override long ContentLength {
             get { return contentLength; }
             set {
                 if(value < 0)
                     throw new ArgumentOutOfRangeException("value", "Content-Length must be >= 0");
-
+                
                 contentLength = value;
             }
         }
 
         public override WebResponse GetResponse() {
-            var response = (FakeResponse)FormatterServices.GetUninitializedObject(typeof(FakeResponse));
-            response.Init(Factory.GetStream(RequestUri));
-            return response;
+            return FakeResponse.New(Factory.GetStream(RequestUri));
         }
     }
 }
